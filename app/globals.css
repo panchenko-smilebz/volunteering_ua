@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-neutral-neutralLighter font-ceraPro font-regular text-md text-neutral-neutralDarker;
+  }
+
+  /* Text Styles */
+  h1 {
+    @apply font-ceraPro font-bold text-h1;
+  }
+  h2 {
+    @apply font-ceraPro font-bold text-h2;
+  }
+  h3 {
+    @apply font-ceraPro font-bold text-h3;
+  }
+  h4 {
+    @apply font-ceraPro font-bold text-h4;
+  }
+  h5 {
+    @apply font-ceraPro font-bold text-h5;
+  }
+  h6 {
+    @apply font-ceraPro font-bold text-h6;
+  }
+  a {
+    @apply text-brand-blue underline underline-offset-2;
+  }
+}
