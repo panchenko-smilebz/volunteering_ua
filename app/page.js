@@ -1,5 +1,7 @@
+import TopRightArrow from '@/components/icons/TopRightArrow';
 import LargeContainer from '@/components/layout/large-container';
 import PaddingContainer from '@/components/layout/padding-container';
+import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 
 export default function Home() {
@@ -18,6 +20,12 @@ export default function Home() {
               illum incidunt!
             </p>
             <Link href="#">Text Link</Link>
+            <Button>Більше про нас</Button>
+            <Button>
+              Підтримати проєкт
+              <TopRightArrow />
+            </Button>
+            <Button variant="outline">Більше про нас</Button>
           </LargeContainer>
         </PaddingContainer>
       </section>

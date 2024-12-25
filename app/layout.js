@@ -5,6 +5,7 @@ import './globals.css';
 const ceraPro = localFont({
   src: [
     { path: '../public/fonts/CeraPro-Regular.woff2', weight: '400' },
+    { path: '../public/fonts/CeraPro-Medium.woff2', weight: '600' },
     { path: '../public/fonts/CeraPro-Bold.woff2', weight: '700' },
   ],
   variable: '--font-cerapro',
