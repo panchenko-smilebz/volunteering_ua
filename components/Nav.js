@@ -2,28 +2,28 @@ import Link from 'next/link';
 
 const MainNavigation = () => {
   return (
-    <nav className="flex flex-col space-y-5xl">
+    <nav className="flex flex-col lg:flex-row space-y-5xl lg:space-y-0 lg:space-x-6xl grow justify-center">
       <Link
         href="#"
-        className="text-xl font-medium text-neutral-neutralDark no-underline"
+        className="text-xl lg:text-sm font-medium lg:font-regular text-neutral-neutralDark no-underline"
       >
         Про фонд
       </Link>
       <Link
         href="#"
-        className="text-xl font-medium text-neutral-neutralDark no-underline"
+        className="text-xl lg:text-sm font-medium lg:font-regular text-neutral-neutralDark no-underline"
       >
         Програми
       </Link>
       <Link
         href="#"
-        className="text-xl font-medium text-neutral-neutralDark no-underline"
+        className="text-xl lg:text-sm font-medium lg:font-regular text-neutral-neutralDark no-underline"
       >
         Контакти
       </Link>
       <Link
         href="#"
-        className="text-xl font-medium text-neutral-neutralDark no-underline"
+        className="text-xl lg:text-sm font-medium lg:font-regular text-neutral-neutralDark no-underline"
       >
         Новини
       </Link>

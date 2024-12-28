@@ -2,12 +2,25 @@
 
 import { Button } from '@/components/ui/button';
 import TopRightArrow from '@/components/icons/TopRightArrow';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Squash as Hamburger } from 'hamburger-react';
 
 const Header = ({ logo, navigation, contacts }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isDesktop, setIsDesktop] = useState(false);
+
+  useEffect(() => {
+    const checkWidth = () => {
+      setIsDesktop(window.innerWidth >= 1024);
+    };
+
+    checkWidth();
+
+    window.addEventListener('resize', checkWidth);
+
+    return () => window.removeEventListener('resize', checkWidth);
+  }, []);
 
   const toggleOpen = () => {
     setIsOpen(!isOpen);
@@ -37,9 +50,9 @@ const Header = ({ logo, navigation, contacts }) => {
   };
 
   return (
-    <header className="md:py-md md:px-5xl md:bg-neutral-white md:border-b md:border-neutral-neutralDarkest">
-      <div className="w-full max-w-[81rem] mx-auto">
-        <div className="py-md px-md flex items-center justify-between relative z-20 bg-neutral-white border-b border-neutral-neutralDarkest">
+    <header className="lg:py-md lg:px-5xl lg:bg-neutral-white lg:border-b lg:border-neutral-neutralDarkest">
+      <div className="w-full max-w-[81rem] mx-auto lg:flex lg:items-center">
+        <div className="py-md lg:py-0 px-md lg:px-0 flex lg:block items-center justify-between relative z-20 bg-neutral-white border-b lg:border-b-0 border-neutral-neutralDarkest">
           {logo}
 
           <div className="lg:hidden" onClick={toggleOpen}>
@@ -53,21 +66,24 @@ const Header = ({ logo, navigation, contacts }) => {
         </div>
 
         <AnimatePresence>
-          {isOpen && (
+          {(isOpen || isDesktop) && (
             <motion.div
-              className="w-full bg-neutral-neutralLight fixed top-0 left-0 z-10 h-screen"
-              variants={menuVariants}
-              initial="initial"
-              animate="animate"
-              exit="exit"
+              className="w-full bg-neutral-neutralLight lg:bg-neutral-transparent fixed lg:static top-0 left-0 z-10 h-screen lg:h-auto"
+              variants={!isDesktop ? menuVariants : {}}
+              initial={!isDesktop ? 'initial' : false}
+              animate={!isDesktop ? 'animate' : false}
+              exit={!isDesktop ? 'exit' : false}
             >
-              <div className="pt-12xl pb-8xl px-md flex flex-col gap-y-5xl justify-between h-full overflow-auto">
+              <div className="pt-12xl lg:pt-0 pb-8xl lg:pb-0 px-md lg:px-0 flex flex-col lg:flex-row lg:items-center justify-between gap-y-5xl lg:gap-y-0 h-full lg:h-auto">
                 {navigation}
 
-                <div className="flex flex-col gap-y-8xl">
-                  <Button onClick={toggleOpen}>
+                <div className="flex flex-col lg:flex-row gap-y-8xl lg:gap-x-4xl lg:items-center">
+                  <Button
+                    onClick={toggleOpen}
+                    variant={!isDesktop ? 'default' : 'small'}
+                  >
                     Підтримати проєкт
-                    <TopRightArrow />
+                    {!isDesktop ? <TopRightArrow /> : ''}
                   </Button>
 
                   <div>{contacts}</div>

@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 const NavContacts = () => {
   return (
-    <address className="not-italic text-xs font-medium">
+    <address className="not-italic text-xs font-medium lg:hidden">
       <Link
         href={`tel:+380675507775`}
         className="block text-neutral-neutralDarker no-underline"
