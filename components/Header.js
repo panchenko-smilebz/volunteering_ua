@@ -82,7 +82,7 @@ const Header = ({ logo, navigation, contacts }) => {
                     onClick={toggleOpen}
                     variant={!isDesktop ? 'default' : 'small'}
                   >
-                    Підтримати проєкт
+                    Підтримати {!isDesktop ? 'проєкт' : ''}
                     {!isDesktop ? <TopRightArrow /> : ''}
                   </Button>
 
