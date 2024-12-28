@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button';
 import TopRightArrow from '@/components/icons/TopRightArrow';
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { Squash as Hamburger } from 'hamburger-react';
 
 const Header = ({ logo, navigation, contacts }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -41,7 +42,14 @@ const Header = ({ logo, navigation, contacts }) => {
         <div className="py-md px-md flex items-center justify-between relative z-20 bg-neutral-white border-b border-neutral-neutralDarkest">
           {logo}
 
-          <div className="lg:hidden" onClick={toggleOpen}></div>
+          <div className="lg:hidden" onClick={toggleOpen}>
+            <Hamburger
+              toggled={isOpen}
+              toggle={setIsOpen}
+              size={32}
+              label={!isOpen ? 'Show menu' : 'Hide menu'}
+            />
+          </div>
         </div>
 
         <AnimatePresence>
