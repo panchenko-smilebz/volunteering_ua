@@ -1,5 +1,9 @@
 import localFont from 'next/font/local';
 import './globals.css';
+import Header from '@/components/Header';
+import LogoComponent from '@/components/ui/logo';
+import MainNavigation from '@/components/Nav';
+import NavContacts from '@/components/NavContacts';
 
 // Fonts
 const ceraPro = localFont({
@@ -39,7 +43,14 @@ export default function RootLayout({ children }) {
       <head>
         <meta name="apple-mobile-web-app-title" content='БФ "ВРУ"' />
       </head>
-      <body className={`${ceraPro.variable} antialiased`}>{children}</body>
+      <body className={`${ceraPro.variable} antialiased`}>
+        <Header
+          logo={<LogoComponent />}
+          navigation={<MainNavigation />}
+          contacts={<NavContacts />}
+        />
+        {children}
+      </body>
     </html>
   );
 }

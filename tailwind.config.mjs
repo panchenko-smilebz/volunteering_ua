@@ -35,6 +35,7 @@ const tailwindConfig = {
       },
     },
     spacing: {
+      0: '0',
       '5xs': '0.1rem',
       '4xs': '0.25rem',
       '3xs': '0.5rem',
@@ -54,8 +55,10 @@ const tailwindConfig = {
       '9xl': '4.5rem',
       '10xl': '5.125rem',
       '11xl': '6.25rem',
+      '12xl': '9rem',
     },
     fontSize: {
+      '2xs': '0.875rem',
       xs: '1rem',
       sm: ['1.125rem', '1.4rem'],
       md: ['1.25rem', '1.625rem'],
