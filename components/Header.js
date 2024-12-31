@@ -80,7 +80,8 @@ const Header = ({ logo, navigation, contacts }) => {
                 <div className="flex flex-col lg:flex-row gap-y-8xl lg:gap-x-4xl lg:items-center">
                   <Button
                     onClick={toggleOpen}
-                    variant={!isDesktop ? 'default' : 'small'}
+                    variant="default"
+                    size={!isDesktop ? 'default' : 'small'}
                   >
                     Підтримати {!isDesktop ? 'проєкт' : ''}
                     {!isDesktop ? <TopRightArrow /> : ''}

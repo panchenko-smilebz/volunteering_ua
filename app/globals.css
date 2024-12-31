@@ -9,10 +9,10 @@
 
   /* Text Styles */
   h1 {
-    @apply font-ceraPro font-bold text-h1;
+    @apply font-ceraPro font-bold text-mobileH1 lg:text-h1;
   }
   h2 {
-    @apply font-ceraPro font-bold text-h2;
+    @apply font-ceraPro font-bold text-mobileH2 lg:text-h2;
   }
   h3 {
     @apply font-ceraPro font-bold text-h3;
@@ -29,4 +29,14 @@
   a {
     @apply text-brand-blue underline underline-offset-2;
   }
+}
+
+/* Hero */
+.hero_shadow {
+  background: linear-gradient(
+    90deg,
+    rgba(26, 26, 26, 0.6) 0%,
+    rgba(26, 26, 26, 0.6) 50%,
+    rgba(26, 26, 26, 0.2) 100%
+  );
 }

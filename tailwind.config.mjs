@@ -56,6 +56,10 @@ const tailwindConfig = {
       '10xl': '5.125rem',
       '11xl': '6.25rem',
       '12xl': '9rem',
+      '13xl': '24rem',
+      '14xl': '31.375rem',
+      '15xl': '35rem',
+      '16xl': '47.5rem',
     },
     fontSize: {
       '2xs': '0.875rem',
@@ -70,6 +74,8 @@ const tailwindConfig = {
       h4: ['2.25rem', '2.8125rem'],
       h5: ['1.75rem', '2.1875rem'],
       h6: ['1.375rem', '1.75rem'],
+      mobileH1: ['2.25rem', '2.75rem'],
+      mobileH2: ['2.25rem', '2.75rem'],
     },
     fontFamily: {
       ceraPro: ['var(--font-cerapro)'],
@@ -79,7 +85,11 @@ const tailwindConfig = {
       medium: '600',
       bold: '700',
     },
-    extend: {},
+    extend: {
+      aspectRatio: {
+        '3/2': '3 / 2',
+      },
+    },
   },
   plugins: [require('tailwindcss-animate')],
 };
