@@ -6,7 +6,7 @@ import Image from 'next/image';
 
 const AreasSection = () => {
   return (
-    <section className="py-9xl lg:py-11xl border-b">
+    <section className="py-9xl lg:py-11xl border-b border-neutral-neutralDark">
       <PaddingContainer>
         <LargeContainer>
           <div className="md:flex  md:gap-md justify-between items-center">
@@ -34,7 +34,7 @@ const AreasSection = () => {
                   className="w-full aspect-3/2 object-cover"
                 />
               </figure>
-              <div className="mt-4xl max-w-15xl">
+              <div className="mt-4xl max-w-16xl">
                 <h3 className="text-h5">Реабілітація військових</h3>
                 <p className="mt-xs">
                   Ми забезпечуємо комплексний підхід до відновлення фізичного та
@@ -54,7 +54,7 @@ const AreasSection = () => {
                   className="w-full aspect-3/2 object-cover"
                 />
               </figure>
-              <div className="mt-4xl max-w-15xl">
+              <div className="mt-4xl max-w-16xl">
                 <h3 className="text-h5">Психологічна допомога</h3>
                 <p className="mt-xs">
                   Ми надаємо професійну психологічну підтримку військовим та
@@ -73,7 +73,7 @@ const AreasSection = () => {
                   className="w-full aspect-3/2 object-cover"
                 />
               </figure>
-              <div className="mt-4xl max-w-15xl">
+              <div className="mt-4xl max-w-16xl">
                 <h3 className="text-h5">Юридична підтримка</h3>
                 <p className="mt-xs">
                   Наші фахівці надають консультації з правових питань,

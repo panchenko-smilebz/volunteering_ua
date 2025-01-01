@@ -8,14 +8,14 @@ const HeroSection = () => {
     <section className="flex flex-col-reverse lg:justify-center pb-9xl lg:pb-0 relative lg:h-[calc(100svh-87px)] lg:text-neutral-white">
       <PaddingContainer>
         <LargeContainer>
-          <h1 className="mt-5xl lg:mt-0 md:max-w-14xl lg:max-w-16xl">
+          <h1 className="mt-5xl lg:mt-0 md:max-w-15xl lg:max-w-17xl">
             Допомагаємо тим, хто цього найбільше потребує
           </h1>
-          <p className="mt-md lg:mt-5xl md:max-w-13xl">
+          <p className="mt-md lg:mt-5xl md:max-w-14xl">
             Об&apos;єднуємо небайдужих людей для підтримки військових, їхніх
             сімей та дітей у дитячих будинках
           </p>
-          <Button className="mt-7xl w-full md:max-w-14xl lg:mt-9xl">
+          <Button className="mt-7xl w-full md:max-w-15xl lg:mt-9xl">
             Підтримати проєкт
             <TopRightArrow />
           </Button>

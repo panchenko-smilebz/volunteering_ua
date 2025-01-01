@@ -5,11 +5,11 @@ import { buttonVariants } from './ui/button';
 
 const AboutSection = () => {
   return (
-    <section className="py-9xl lg:py-11xl border-y lg:border-t-0 bg-neutral-neutralLight">
+    <section className="py-9xl lg:py-11xl border-y lg:border-t-0 border-neutral-neutralDark bg-neutral-neutralLight">
       <PaddingContainer>
         <LargeContainer>
           <div className="md:grid md:grid-cols-2 md:gap-2xl">
-            <h2 className="max-w-14xl text-h3">
+            <h2 className="max-w-15xl text-h3">
               Ми, Благодійний фонд «Волонтерський рух України»
             </h2>
             <div className="mt-md md:mt-0">
