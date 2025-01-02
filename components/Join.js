@@ -2,15 +2,8 @@ import Link from 'next/link';
 import TopRightArrow from './icons/TopRightArrow';
 import LargeContainer from './layout/large-container';
 import PaddingContainer from './layout/padding-container';
-import { Button, buttonVariants } from './ui/button';
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from './ui/dialog';
+import { buttonVariants } from './ui/button';
+import ShareDialog from './ui/share';
 
 const JoinSection = () => {
   return (
@@ -55,29 +48,7 @@ const JoinSection = () => {
                   вагомим внеском у досягнення нашої спільної мети!
                 </p>
               </div>
-              <Dialog>
-                <DialogTrigger asChild>
-                  <Button
-                    variant="outline"
-                    size="default"
-                    className="md:items-end w-full md:h-12xl bg-neutral-white"
-                  >
-                    Поділитись сайтом
-                    <TopRightArrow />
-                  </Button>
-                </DialogTrigger>
-                <DialogContent>
-                  <DialogHeader>
-                    <DialogTitle>
-                      Поділись сайтом та поширюй збір коштів на авто для ЗСУ!
-                    </DialogTitle>
-                    <DialogDescription>
-                      This action cannot be undone. This will permanently delete
-                      your account and remove your data from our servers.
-                    </DialogDescription>
-                  </DialogHeader>
-                </DialogContent>
-              </Dialog>
+              <ShareDialog />
             </div>
             <div className="grid grid-cols-1 lg:grid-cols-[1fr_0.8fr] gap-y-2xl gap-x-11xl">
               <div className="lg:flex gap-x-8xl">
